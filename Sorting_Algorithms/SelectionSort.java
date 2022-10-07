@@ -33,7 +33,5 @@ public class SelectionSort {
         int temp= arr[first];
         arr[first]= arr[second];
         arr[second]= temp; 
-
-
     }
 }
