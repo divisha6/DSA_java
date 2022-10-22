@@ -1,4 +1,4 @@
-package Recursion;
+// package Recursion;
 
 public class PrintSum {
     public static int calcFactorial(int n) {
