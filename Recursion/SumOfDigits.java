@@ -10,8 +10,6 @@ public class SumOfDigits {
             return 0;
         }
         return ((n % 10) + sum(n /10));
-
-
     }
 
     public static int product(int n) {
