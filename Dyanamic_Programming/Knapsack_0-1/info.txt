@@ -1,0 +1,16 @@
+Basically a problem where a collection of things are put in a bag/sack.
+
+Sometimes the size of the sack/bag is mentioned. 
+Like 50 units can be stored in this bag.
+
+FRACTIONAL KNAPSACK:
+Problem where the items to be put into the sack/bag can be divided. 
+Eg: sugar, salt, pepper.
+
+0-1 KNAPSACK:
+Problem where the item cannot be divided.
+It is either put into the bag entirely or not at all.
+Eg: Mobile phone, fridge, laptop.  
+
+UNBOUNDED KNAPSACK
+Problem where the items can be repeated. Items can be multiplied to fill the bag/sack.
