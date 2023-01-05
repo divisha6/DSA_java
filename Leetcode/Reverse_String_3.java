@@ -1,7 +1,5 @@
 import java.util.Arrays;
 
-import javax.swing.text.StyledEditorKit.ForegroundAction;
-
 class Reverse_String_3 {
     public void main(String[] args) {
         String s= "Let's take LeetCode contest";
