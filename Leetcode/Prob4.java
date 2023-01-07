@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob4 {
     public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
         int m = nums1.length;
@@ -15,15 +17,17 @@ public class Prob4 {
        if (newArr.length==1 ) return newArr[0];
 
         int p = newArr.length;
-
-        // if length is odd
-        if( p % 2 !=0 ){
-            median = newArr [ p/2 +1];
-        }
+        int mid= p/2;
+        Arrays.sort(newArr);
 
         // if length is even
-        if(p % 2 ==0){
-            median= (newArr[p/2] + newArr[p/2 - 1])/2.0;
+        if( p % 2 ==0 ){
+            median = (newArr[mid]+newArr[mid-1])/2.0;
+        }
+
+        // if length is odd
+        else{
+            median = newArr[mid];
         }
 
         return median ;
