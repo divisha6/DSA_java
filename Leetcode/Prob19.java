@@ -3,7 +3,7 @@ public class Prob19 {
         if(head.next==null){
             return null;
         }
-
+        
            // size
         int size=0;
         ListNode curr = head;
