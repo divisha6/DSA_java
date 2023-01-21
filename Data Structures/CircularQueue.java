@@ -1,8 +1,9 @@
-public class QueueY{
+public class CircularQueue {
     static class Queue{
         static int[] arr;
         static int size;
         static int rear=-1;
+        static int front = -1;
 
         Queue(int size) {
             this.size = size;
@@ -12,16 +13,26 @@ public class QueueY{
  
 
         public static boolean isEmpty() {
-            return rear == -1;
+            return rear == -1 && front == -1;
+        }
+
+        public static boolean isFull(){
+            return (rear+1)%size == front;
         }
 
         // enqueue
         public static void add(int data) {
-            if(rear==size-1){
+            if(isFull()){
                 System.out.println("full queue");
                 return;
             }
-            arr[++rear]=data;
+
+            if(front ==-1){
+                front=0;
+            }
+
+            rear= (rear+1)%size;
+            arr[rear]=data;
         }
 
         public static int remove() {
@@ -29,10 +40,13 @@ public class QueueY{
                 System.out.println("Q is empty");
                 return -1;
             }
-            int front = arr[0];
-            for (int i = 0; i < rear; i++) {
-                arr[i]=arr[i+1];
-
+            int result = arr[front];
+            // condition for single element
+            if(front==rear){
+                rear=front=-1;
+            }
+            else{
+                front=(front+1)%size;
             }
             rear--;
             return front;
@@ -45,7 +59,7 @@ public class QueueY{
                 return -1;
             }
             
-            return arr[0];
+            return arr[front];
         }
     }
 
