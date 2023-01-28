@@ -100,6 +100,16 @@ public class BinaryTreeYT{
          return leftnodes + rightnodes + 1;    
     }
 
+    // SUM OF NODES- time complexity O(n)
+    public static int sumOfNodes(Node root ) {
+        if(root==null){
+            return 0;
+        }
+         int leftSum = sumOfNodes(root.left);
+         int rightSum = sumOfNodes(root.right);
+         return leftSum + rightSum + root.data;           
+    }
+
     public static void main(String[] args) {
         int nodes[] = {78,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
@@ -114,6 +124,6 @@ public class BinaryTreeYT{
         System.out.println("Levelorder is:");
         levelorder(root);
         System.out.print("Total number of nodes are ");
-        System.out.println(countOfNodes(root));
+        System.out.println(sumOfNodes(root));
     }
 }
