@@ -121,21 +121,61 @@ public class BinaryTreeYT{
         return maxHeight;
     }
 
+    // DIAMETER- time O(n^2)- quadratic complexity
+    public static int diameter1(Node root) {
+        if(root==null){
+            return 0;
+        }
+        int diam1 = diameter1(root.left);
+        int diam2 = diameter1(root.right);
+        int diam3 = height(root.left) + height(root.right) + 1;
+         return Math.max(diam2, Math.max(diam1, diam3));   
+    }
+
+    // class to store height and diameter at all stages
+    static class TreeInfo{
+        int height;
+        int diam;
+
+        TreeInfo(int ht, int diam){
+            this.height = height;
+            this.diam= diam;
+        }
+    }
+    // DIAMETER- time O(n) - linear time complexity (wrong ans de raha hai)
+    public static TreeInfo diameter(Node root) {
+        if(root == null) {
+            return new TreeInfo(0, 0);
+        }
+        TreeInfo leftTI = diameter(root.left);
+        TreeInfo rightTI = diameter(root.right);
+        int myHeight = Math.max(leftTI.height, rightTI.height) + 1;
+        int diam1 = leftTI.height + rightTI.height + 1;
+        int diam2 = leftTI.diam;
+        int diam3 = rightTI.diam;
+        int myDiam = Math.max(diam1, Math.max(diam2, diam3));
+        return new TreeInfo(myHeight, myDiam);
+    }
+ 
+
+
     public static void main(String[] args) {
         int nodes[] = {78,2,4,-1,-1,5,-1,-1,3,-1,6,-1,-1};
         BinaryTree tree = new BinaryTree();
         Node root= tree.buildTree(nodes);
-        System.out.println(root.data);
-        System.out.print("Preorder is ");
-        preorder(root);
-        System.out.print("Inorder is ");
-        inorder(root);
-        System.out.print("Postorder is ");
-        postorder(root);
-        System.out.println("Levelorder is:");
-        levelorder(root);
-        System.out.print("Total number of nodes are ");
-        System.out.println(sumOfNodes(root));
-        System.out.println(height(root));
+        // System.out.println(root.data);
+        // System.out.print("Preorder is ");
+        // preorder(root);
+        // System.out.print("Inorder is ");
+        // inorder(root);
+        // System.out.print("Postorder is ");
+        // postorder(root);
+        // System.out.println("Levelorder is:");
+        // levelorder(root);
+        // System.out.print("Total number of nodes are ");
+        // System.out.println(sumOfNodes(root));
+        // System.out.println(height(root));
+        System.out.println(diameter(root).diam);
+
     }
 }
