@@ -1,3 +1,5 @@
+import java.util.HashMap;
+
 public class Prob1287 {
     public int findSpecialInteger(int[] arr) {
         int max=-1;
