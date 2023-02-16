@@ -25,7 +25,7 @@ public class Prob4 {
             median = (newArr[mid]+newArr[mid-1])/2.0;
         }
 
-        // if length is odd
+        
         else{
             median = newArr[mid];
         }
