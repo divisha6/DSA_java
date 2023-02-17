@@ -25,7 +25,6 @@ public class Prob4 {
             median = (newArr[mid]+newArr[mid-1])/2.0;
         }
 
-        
         else{
             median = newArr[mid];
         }
