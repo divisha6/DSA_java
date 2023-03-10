@@ -48,7 +48,7 @@ public class BinaryTreeYT{
         inorder(root.right);
     }
 
-    // POSTORDER- time complexuty O(n)
+    // POSTORDER- time complexity O(n)
     public static void postorder(Node root){
         if(root==null){
             return;
