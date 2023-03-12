@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob202 {
     public boolean isHappy(int n) { 
         Set<Integer> inLoop = new HashSet<Integer>();
