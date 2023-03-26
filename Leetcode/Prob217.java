@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob217{
     public boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set= new HashSet<>();
