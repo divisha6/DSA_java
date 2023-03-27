@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob349 {
     public int[] intersection(int[] nums1, int[] nums2) {
         HashSet<Integer> res = new HashSet<>();
