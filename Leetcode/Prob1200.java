@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob1200 {
     public List<List<Integer>> minimumAbsDifference(int[] arr) {
         List<List<Integer>> ans = new ArrayList<>();
