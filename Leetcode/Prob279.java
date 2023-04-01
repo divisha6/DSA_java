@@ -1,6 +1,6 @@
 public class Prob279 {
     public int numSquares(int n) {
-        // Legendre's 3-Square Theorem
+        // Legendre's 3-Square Theorem : Remember
         // 4-Square theorem: Every natural no is sum of 4 squares.
         // 3-Square Theorem: Every natural no is sum of 3 squares if it does not satisfies 4^a (8b + 7) = N
         // So our answer will be 1, 2, 3 or 4.
