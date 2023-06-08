@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob47 {
     public List<List<Integer>> permuteUnique(int[] nums) {
         HashSet<List<Integer>> ans = new HashSet<>();

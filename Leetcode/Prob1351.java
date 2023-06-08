@@ -6,7 +6,6 @@ public class Prob1351 {
                 if(grid[i][j]<0) count++;
             }
         }
-
         return count;
     }
 }

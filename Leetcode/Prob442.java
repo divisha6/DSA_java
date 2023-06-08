@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class Prob442{
     public List<Integer> findDuplicates(int[] nums) {
         // ArrayList<Integer> list = new ArrayList<>();

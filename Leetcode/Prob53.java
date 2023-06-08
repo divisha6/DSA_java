@@ -22,3 +22,17 @@ public class Prob53 {
         return max;
     }
 }
+
+
+for(int i=0;i<arr.size();i++)
+        {
+            arr.set(i, Integer.bitCount(arr.get(i))*10001);
+        }
+        
+        Collections.sort(arr);
+        
+        for(int i=0;i<arr.size();i++)
+        {
+            arr.set(i, Integer.bitCount(arr.get(i))%10001);
+        }
+        return arr;
