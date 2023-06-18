@@ -52,7 +52,7 @@ public class LL {
             return;
         }
         size--;
-        head = head.next;
+        
     }
 
     // delete last

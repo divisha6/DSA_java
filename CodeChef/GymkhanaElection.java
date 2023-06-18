@@ -13,5 +13,6 @@ public class GymkhanaElection {
 
             System.out.println((M / 2) + 1);
         }
+        sc.close();
     }
 }
