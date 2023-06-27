@@ -1,0 +1,34 @@
+import java.util.*;
+public class Prob373 {
+    public List<List<Integer>> kSmallestPairs(int[] nums1, int[] nums2, int k) {
+        List<List<Integer>> ans = new ArrayList<>();
+        if(nums1 == null || nums2 == null || nums1.length == 0 || nums2.length == 0 || k <= 0){
+            return ans;
+        }
+
+        HashSet<String> visited = new HashSet<>();
+        PriorityQueue<int[]> heap = new PriorityQueue<>((a,b)-> a[0]+a[1]-b[0]-b[1]);
+        // PQ that gives prioirty to small sums (when sums are of nums in pairs)
+        heap.offer(new int[]{nums1[0], nums2[0], 0,0});
+        visited.add("0,0");
+
+        while(k>0 && !heap.isEmpty()){
+            int[] curr = heap.poll();
+            int i = curr[2];
+            int j = curr[3];
+            ans.add(List.of(curr[0],curr[1]));
+            k--;
+
+            if(i+1<nums1.length && !visited.contains((i+1)+","+j)){
+                heap.offer(new int[]{nums1[i+1], nums2[j], i+1, j});
+                visited.add((i+1)+","+j);
+            }
+
+            if(j+1<nums2.length && !visited.contains(i+","+(j+1))){
+                heap.offer(new int[]{nums1[i], nums2[j+1], i, j+1});
+                visited.add(i+","+(j+1));
+            }
+        }
+        return ans;
+    }
+}
