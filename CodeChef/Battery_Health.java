@@ -20,5 +20,6 @@ public class Battery_Health{
 		        System.out.println("NO");
 		    }
 		}
+		a.close();
 	}
 }
