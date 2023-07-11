@@ -1,7 +1,7 @@
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class Candies {
+public class Candies{
     public static void main (String[] args) throws java.lang.Exception
 	{
 		// your code goes here
