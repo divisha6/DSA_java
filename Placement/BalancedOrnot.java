@@ -1,4 +1,4 @@
-package Placement;
+
 import java.util.*;
 
 public class BalancedOrnot {

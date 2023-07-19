@@ -1,5 +1,3 @@
-package Placement;
-
 public class GFG {
    
 

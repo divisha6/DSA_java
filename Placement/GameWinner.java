@@ -1,4 +1,3 @@
-package Placement;
 
 public class GameWinner {
     public static void main(String[] args) {

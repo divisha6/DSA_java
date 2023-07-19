@@ -1,5 +1,3 @@
-package Placement;
-
 import java.util.Arrays;
 
 public class WordRearranger {

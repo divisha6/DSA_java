@@ -1,5 +1,3 @@
-package Placement;
-
 public class LongestEven {
     public static void main(String[] args) {
         String test= "hey";

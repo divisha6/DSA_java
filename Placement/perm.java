@@ -1,5 +1,3 @@
-package Placement;
-
 public class perm {
     public static String nextPermutation(String word) {
         char[] A = word.toCharArray();
@@ -9,7 +7,7 @@ public class perm {
             if(i >= 0) {                           
                 int j = A.length - 1;              
                 while(A[j] <= A[i]) j--;      
-                swap(A, i, j);                     
+                // swap(A, i, j);                     
             }
             return reverse(A, i + 1, A.length - 1);
         }
