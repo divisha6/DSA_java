@@ -2,15 +2,15 @@ public class LL {
     Node head;
     private int size;
 
-    LL(){
-        this.size=0;
+    LL() {
+        this.size = 0;
     }
 
-    public class Node{
+    public class Node {
         String data;
         Node next;
 
-        Node(String data){
+        Node(String data) {
             this.data = data;
             this.next = null;
             size++;
@@ -18,79 +18,79 @@ public class LL {
     }
 
     // add in linked list
-    public void addFirst(String data){
+    public void addFirst(String data) {
         Node newNode = new Node(data);
         // LL does not exist
-        if(head == null){
+        if (head == null) {
             head = newNode;
             return;
         }
-        newNode.next= head;
-        head= newNode;
+        newNode.next = head;
+        head = newNode;
     }
 
-    public void addLast(String data){
+    public void addLast(String data) {
         Node newNode = new Node(data);
         // LL does not exist
-        if(head == null){
+        if (head == null) {
             head = newNode;
             return;
         }
 
         // traversal and addition to last
         Node currNode = head;
-        while(currNode.next != null){
+        while (currNode.next != null) {
             currNode = currNode.next;
         }
         currNode.next = newNode;
     }
 
     // delete first
-    public void deleteFirst(){
-        if(head== null){
+    public void deleteFirst() {
+        if (head == null) {
             System.out.println("the list is empty");
             return;
         }
         size--;
-        
+
     }
 
     // delete last
-    public void deleteLast(){
-        if(head== null){
+    public void deleteLast() {
+        if (head == null) {
             System.out.println("the list is empty");
             return;
         }
 
         size--;
-        if(head.next == null){
-            head= null;
+        if (head.next == null) {
+            head = null;
             return;
         }
 
         Node secondLast = head;
         Node newNode = head.next;
 
-        while(newNode.next != null){
+        while (newNode.next != null) {
             newNode = newNode.next;
-            secondLast= secondLast.next;
+            secondLast = secondLast.next;
         }
-        secondLast.next= null;
+        secondLast.next = null;
     }
 
     // gettinh size of LL
-    public int getSize(){
+    public int getSize() {
         return size;
     }
 
     // printing a linked list
-    public void printingLL(){
-        if(head == null){
+    public void printingLL() {
+        if (head == null) {
             System.out.println("list is empty");
         }
 
         Node currNode = head;
-        while(currNode != null){
+        while (currNode != null) {
             System.out.print(currNode.data + "->");
             currNode = currNode.next;
         }
@@ -99,13 +99,13 @@ public class LL {
 
     // reversing linked list
     public void reverseList() {
-        if(head == null || head.next == null) {
+        if (head == null || head.next == null) {
             return;
         }
-  
+
         Node prevNode = head;
         Node currNode = head.next;
-        while(currNode != null) {
+        while (currNode != null) {
             Node nextNode = currNode.next;
             currNode.next = prevNode;
             prevNode = currNode;
@@ -114,7 +114,6 @@ public class LL {
         head.next = null;
         head = prevNode;
     }
- 
 
     public static void main(String[] args) {
         LL list = new LL();
