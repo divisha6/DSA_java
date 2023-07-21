@@ -1,3 +1,5 @@
+package Data_Structures;
+
 import java.util.*;
 
 public class QueueJCF {
