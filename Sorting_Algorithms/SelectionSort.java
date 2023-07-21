@@ -10,11 +10,11 @@ public class SelectionSort {
     }
 
     static void selection(int[] arr){
-         (int i = 0; i < arr.length; i++) {
+         for(int i = 0; i < arr.length; i++) {
             // find the biggest element in the given array and swap with the correct index
             int last= arr.length - i-1;
             int maxIndex= getMaxIndex(arr, 0, last);
-          for  swap(arr, maxIndex, last);
+            swap(arr, maxIndex, last);
         }
         // System.out.println(arr);
     }
